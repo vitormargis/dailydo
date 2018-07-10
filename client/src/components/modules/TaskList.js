@@ -24,8 +24,7 @@ export class TaskList extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.props.fetchTasks(), 1000);
-    setInterval(() => this.props.fetchTasks(), 30000);
+    this.props.fetchTasks()
   }
 
   onTaskToggle({ id }) {
@@ -83,6 +82,7 @@ export class TaskList extends Component {
     return activeTasks.map(task =>
       <TaskActive
         task={task}
+        key={task.id}
         onTaskToggle={this.onTaskToggle}
         onTaskDelete={this.onTaskDelete}
         onTaskUpdate={this.onTaskUpdate}
@@ -96,6 +96,7 @@ export class TaskList extends Component {
     return completeTasks.map(task =>
       <TaskCompleted
         task={task}
+        key={task.id}
         onTaskToggle={this.onTaskToggle}
         onTaskDelete={this.onTaskDelete}
       />

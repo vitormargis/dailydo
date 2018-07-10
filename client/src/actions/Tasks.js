@@ -38,11 +38,11 @@ export const toggleTask = (tasks, id) => {
   };
 };
 
-export const fetchTasks = () => {
-  const request = Fetch('GET', 'tasks')
+export const fetchTasks = async () => {
+  const { tasks } = await Fetch('GET', 'tasks')
 
   return {
     type: FETCH_TASKS,
-    payload: request
+    payload: tasks
   };
 };

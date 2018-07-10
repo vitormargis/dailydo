@@ -22,7 +22,7 @@ export default function Tasks(state = DEFAULT_STATE, action) {
     case UPDATE_TASK:
       return { isFetching: false, tasks: action.payload };
     case FETCH_TASKS:
-      return { isFetching: false, tasks: action.payload.tasks};
+      return { isFetching: false, tasks: action.payload };
     default:
       return state;
   }

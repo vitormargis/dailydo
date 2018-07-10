@@ -11,7 +11,7 @@ export const TaskActive = ({ task, onTaskToggle, onTaskDelete, onTaskUpdate }) =
   const placeholder = 'Add a task description...';
 
   return (
-    <li key={task.id} className={`task-list-item`}>
+    <li className={`task-list-item`}>
       <span className="on-task-done" onClick={onToggle}>O</span>
       <span className="on-task-delete" onClick={onDelete}>X</span>
       <form onSubmit={onUpdate}>

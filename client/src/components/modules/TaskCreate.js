@@ -5,7 +5,7 @@ export const TaskCreate = ({ title, onTaskCreate }) => {
   const placeholder = 'Add new task...';
 
   return(
-    <li key="0" className={`task-list-item`}>
+    <li key="init" className={`task-list-item`}>
       <form onSubmit={onCreate}>
         <input type="text" value={title} placeholder={placeholder}
           onChange={onCreate}
